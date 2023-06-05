@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -14,7 +15,7 @@ int main(){
 
   /*Configure settings in address struct*/
   serverAddr.sin_family = AF_INET;
-  serverAddr.sin_port = htons(6119);
+  serverAddr.sin_port = htons(8893);
   serverAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
   memset(serverAddr.sin_zero, '\0', sizeof serverAddr.sin_zero);  
 
@@ -40,7 +41,6 @@ int main(){
 
   return 0;
 }
-
 udp server
 #include <stdio.h>
 #include <sys/socket.h>
@@ -61,7 +61,7 @@ int main(){
 
   /*Configure settings in address struct*/
   serverAddr.sin_family = AF_INET;
-  serverAddr.sin_port = htons(6119);
+  serverAddr.sin_port = htons(8893);
   serverAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
   memset(serverAddr.sin_zero, '\0', sizeof serverAddr.sin_zero);  
 
